@@ -257,7 +257,6 @@ export default function Calculator() {
         <meta property="og:description" content="Simple Calculator" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://skhyena.com/" />
-        <meta property="og:image" content="https://skhyena.com/og-image.png" />
       </Helmet>
 
       <div className="flex flex-col items-center justify-center min-h-screen p-4">
