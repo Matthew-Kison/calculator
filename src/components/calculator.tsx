@@ -252,15 +252,15 @@ export default function Calculator() {
       <Helmet>
         <title>Calculator | Dark Mode Calculator</title>
         <meta name="description" content="Simple Calculator" />
-        <meta name="keywords" content="calculator, 计算器, 계산기" />
+        <meta name="keywords" content="calculator, 计算器, 계산기, logging calculator" />
         <meta property="og:title" content="Calculator | Dark Mode Calculator" />
-        <meta property="og:description" content="Simple Calculator" />
+        <meta property="og:description" content="Simple logging calculator" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://skhyena.com/" />
       </Helmet>
 
       <div className="flex flex-col items-center justify-center min-h-screen p-4">
-        <div className="flex w-full max-w-xl justify-center gap-4">
+        <div className="flex flex-col md:flex-row w-full max-w-xl justify-center gap-4">
           {/* 계산기 본체 */}
           <div className="w-full max-w-md bg-gray-100 dark:bg-gray-900 rounded-3xl shadow-2xl overflow-hidden">
             {/* 계산기 디스플레이 */}
@@ -273,7 +273,7 @@ export default function Calculator() {
 
             {/* 키보드 단축키 안내 */}
             <div className="px-6 py-2 bg-gray-300 dark:bg-gray-800 text-xs text-center text-gray-600 dark:text-gray-400">
-              키보드 사용: 숫자 키(0-9), 연산자(+, -, *, /), 엔터(=), ESC(AC), 백스페이스
+              Keyboard usage: Number keys (0-9), Operators (+, -, *, /), Enter (=), ESC (AC), Backspace
             </div>
 
             {/* 계산기 버튼 */}
@@ -346,9 +346,9 @@ export default function Calculator() {
           </div>
 
           {/* 최근 입력 숫자 히스토리 */}
-          <div className="w-24 bg-gray-100 dark:bg-gray-900 rounded-3xl shadow-xl overflow-hidden">
-            <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-center text-sm font-medium">최근 숫자</div>
-            <div className="p-3 flex flex-col gap-2">
+          <div className="w-full md:w-24 bg-gray-100 dark:bg-gray-900 rounded-3xl shadow-xl overflow-hidden ">
+            <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-center text-sm font-medium">Recents</div>
+            <div className="p-3 flex flex-row flex-nowrap md:flex-1 md:flex-col gap-2">
               {numberHistory.length > 0 ? (
                 numberHistory.map((item, index) => (
                   <button
@@ -359,13 +359,13 @@ export default function Calculator() {
                         setEquation(item);
                       }
                     }}
-                    className="p-2 text-center bg-gray-200 dark:bg-gray-800 rounded-lg text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
+                    className="p-2 text-center bg-gray-200 dark:bg-gray-800 rounded-lg text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors truncate"
                   >
                     {item}
                   </button>
                 ))
               ) : (
-                <div className="text-center text-gray-500 dark:text-gray-400 text-xs p-2">입력한 숫자가 여기에 표시됩니다</div>
+                <div className="text-center text-gray-500 dark:text-gray-400 text-xs p-2">Input numbers will be displayed here</div>
               )}
             </div>
           </div>
