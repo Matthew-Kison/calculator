@@ -3,7 +3,7 @@ import Calculator from "../../components/calculator";
 import { useState } from "react";
 
 export default function FrontCalculator() {
-  const [activeTab, setActiveTab] = useState("calculator");
+  const [activeTab, setActiveTab] = useState("aspect-ratio");
   const [width, setWidth] = useState("");
   const [height, setHeight] = useState("");
   const [hexColor, setHexColor] = useState("#000000");
@@ -61,49 +61,42 @@ export default function FrontCalculator() {
         <title>프론트엔드 계산기 | 프론트엔드 웹 개발자를 위한 계산기</title>
         <meta
           name="description"
-          content="프론트엔드 개발자를 위한 특별한 계산기 애플리케이션입니다. 비율 계산, 색상 변환, 단위 변환 등 다양한 기능을 제공합니다."
+          content="A special calculator application for frontend developers. Provides various functions such as aspect ratio calculation, color conversion, and unit conversion."
         />
-        <meta name="keywords" content="프론트엔드, 계산기, 개발자 도구, React, 비율 계산, 색상 변환, 단위 변환" />
-        <meta property="og:title" content="프론트엔드 계산기 | 프론트엔드 웹 개발자를 위한 계산기" />
+        <meta name="keywords" content="frontend, calculator, developer tools, React, aspect ratio calculation, color conversion, unit conversion" />
+        <meta property="og:title" content="Frontend Calculator | Frontend Web Developer Calculator" />
         <meta
           property="og:description"
-          content="프론트엔드 개발자를 위한 특별한 계산기 애플리케이션입니다. 비율 계산, 색상 변환, 단위 변환 등 다양한 기능을 제공합니다."
+          content="Frontend developer's special calculator application. Provides various functions such as aspect ratio calculation, color conversion, and unit conversion."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://your-website.com/front-calculator" />
-        <meta property="og:image" content="https://your-website.com/front-calculator-preview.jpg" />
+        <meta property="og:url" content="https://skhyena.com/front-calculator" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-100 dark:bg-gray-900 py-8">
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">프론트엔드 개발자를 위한 계산기</h1>
+          <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">Frontend Calculator</h1>
 
           {/* 탭 메뉴 */}
           <div className="flex justify-center mb-8">
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-1 flex">
               <button
-                onClick={() => setActiveTab("calculator")}
-                className={`px-4 py-2 rounded-md ${activeTab === "calculator" ? "bg-blue-500 text-white" : "text-gray-700 dark:text-gray-300"}`}
-              >
-                기본 계산기
-              </button>
-              <button
                 onClick={() => setActiveTab("aspect-ratio")}
                 className={`px-4 py-2 rounded-md ${activeTab === "aspect-ratio" ? "bg-blue-500 text-white" : "text-gray-700 dark:text-gray-300"}`}
               >
-                화면 비율 계산
+                Aspect Ratio
               </button>
               <button
                 onClick={() => setActiveTab("color-converter")}
                 className={`px-4 py-2 rounded-md ${activeTab === "color-converter" ? "bg-blue-500 text-white" : "text-gray-700 dark:text-gray-300"}`}
               >
-                색상 변환
+                Color Converter
               </button>
               <button
                 onClick={() => setActiveTab("unit-converter")}
                 className={`px-4 py-2 rounded-md ${activeTab === "unit-converter" ? "bg-blue-500 text-white" : "text-gray-700 dark:text-gray-300"}`}
               >
-                단위 변환
+                Unit Converter
               </button>
             </div>
           </div>
@@ -118,30 +111,30 @@ export default function FrontCalculator() {
 
             {activeTab === "aspect-ratio" && (
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-full max-w-xl">
-                <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">화면 비율 계산기 (16:9)</h2>
+                <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">Aspect Ratio Calculator (16:9)</h2>
                 <div className="grid grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-gray-700 dark:text-gray-300 mb-2">너비 (Width)</label>
+                    <label className="block text-gray-700 dark:text-gray-300 mb-2">Width</label>
                     <div className="relative">
                       <input
                         type="number"
                         value={width}
                         onChange={(e) => calculateAspectRatio("width", e.target.value)}
                         className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        placeholder="너비 입력"
+                        placeholder="Enter width"
                       />
                       <span className="absolute right-3 top-2 text-gray-500 dark:text-gray-400">px</span>
                     </div>
                   </div>
                   <div>
-                    <label className="block text-gray-700 dark:text-gray-300 mb-2">높이 (Height)</label>
+                    <label className="block text-gray-700 dark:text-gray-300 mb-2">Height</label>
                     <div className="relative">
                       <input
                         type="number"
                         value={height}
                         onChange={(e) => calculateAspectRatio("height", e.target.value)}
                         className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        placeholder="높이 입력"
+                        placeholder="Enter height"
                       />
                       <span className="absolute right-3 top-2 text-gray-500 dark:text-gray-400">px</span>
                     </div>
@@ -149,23 +142,23 @@ export default function FrontCalculator() {
                 </div>
                 <div className="mt-6 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
                   <p className="text-gray-700 dark:text-gray-300 text-center">
-                    16:9 비율:{" "}
+                    Aspect Ratio:{" "}
                     <span className="font-semibold">
                       {width} × {height}
                     </span>
                   </p>
                 </div>
                 <div className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-                  <p>* 16:9는 HD(1920×1080), FHD, 4K 등 대부분의 모니터와 TV에서 사용하는 표준 화면 비율입니다.</p>
+                  <p>* 16:9 is the standard aspect ratio used on most monitors and TVs, including HD (1920×1080), FHD, and 4K.</p>
                 </div>
               </div>
             )}
 
             {activeTab === "color-converter" && (
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-full max-w-xl">
-                <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">색상 변환기</h2>
+                <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">Color Converter</h2>
                 <div className="mb-6">
-                  <label className="block text-gray-700 dark:text-gray-300 mb-2">HEX 색상</label>
+                  <label className="block text-gray-700 dark:text-gray-300 mb-2">HEX Color</label>
                   <div className="flex">
                     <input
                       type="color"
@@ -182,7 +175,7 @@ export default function FrontCalculator() {
                   </div>
                 </div>
                 <div className="mb-6">
-                  <label className="block text-gray-700 dark:text-gray-300 mb-2">RGB 색상</label>
+                  <label className="block text-gray-700 dark:text-gray-300 mb-2">RGB Color</label>
                   <input
                     type="text"
                     value={rgbColor}
@@ -198,37 +191,37 @@ export default function FrontCalculator() {
 
             {activeTab === "unit-converter" && (
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-full max-w-xl">
-                <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">단위 변환기</h2>
+                <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">Unit Converter</h2>
                 <div className="grid grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-gray-700 dark:text-gray-300 mb-2">픽셀 (px)</label>
+                    <label className="block text-gray-700 dark:text-gray-300 mb-2">Pixel (px)</label>
                     <div className="relative">
                       <input
                         type="number"
                         value={pxValue}
                         onChange={(e) => pxToRem(e.target.value)}
                         className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        placeholder="px 값 입력"
+                        placeholder=""
                       />
                       <span className="absolute right-3 top-2 text-gray-500 dark:text-gray-400">px</span>
                     </div>
                   </div>
                   <div>
-                    <label className="block text-gray-700 dark:text-gray-300 mb-2">렘 (rem)</label>
+                    <label className="block text-gray-700 dark:text-gray-300 mb-2">Rem (rem)</label>
                     <div className="relative">
                       <input
                         type="number"
                         value={remValue}
                         onChange={(e) => remToPx(e.target.value)}
                         className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        placeholder="rem 값 입력"
+                        placeholder=""
                       />
                       <span className="absolute right-3 top-2 text-gray-500 dark:text-gray-400">rem</span>
                     </div>
                   </div>
                 </div>
                 <div className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-                  <p>* 기본 설정: 1rem = 16px (브라우저 기본값)</p>
+                  <p>* Default setting: 1rem = 16px (browser default)</p>
                 </div>
               </div>
             )}
