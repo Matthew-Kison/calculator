@@ -127,6 +127,18 @@ export default function Header() {
                 Frontend
               </Link>
             </li>
+            <li>
+              <Link
+                to="/savings"
+                className={`block py-2 px-4 rounded-lg ${
+                  pathname === "/savings"
+                    ? "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                }`}
+              >
+                Savings
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
