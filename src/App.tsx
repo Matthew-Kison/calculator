@@ -1,8 +1,9 @@
 import { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Calculator from "./components/calculator";
 import FrontCalculator from "./route/front-calculator";
+import SavingsCalculator from "./route/savings";
 
 function App() {
   // const [darkMode, setDarkMode] = useState(false);
@@ -27,6 +28,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Calculator />} />
             <Route path="/front-calculator" element={<FrontCalculator />} />
+            <Route path="/savings" element={<SavingsCalculator />} />
           </Routes>
         </main>
       </div>

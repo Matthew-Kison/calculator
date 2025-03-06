@@ -58,7 +58,7 @@ export default function FrontCalculator() {
   return (
     <>
       <Helmet>
-        <title>프론트엔드 계산기 | 프론트엔드 웹 개발자를 위한 계산기</title>
+        <title>Frontend Calculator | Frontend Web Developer Calculator</title>
         <meta
           name="description"
           content="A special calculator application for frontend developers. Provides various functions such as aspect ratio calculation, color conversion, and unit conversion."
@@ -73,7 +73,7 @@ export default function FrontCalculator() {
         <meta property="og:url" content="https://skhyena.com/front-calculator" />
       </Helmet>
 
-      <div className="min-h-screen bg-gray-100 dark:bg-gray-900 py-8">
+      <div className="min-h-screen py-8">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">Frontend Calculator</h1>
 

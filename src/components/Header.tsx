@@ -44,7 +44,7 @@ export default function Header() {
                   pathname === "/" ? "text-blue-500 dark:text-blue-400" : ""
                 }`}
               >
-                Arithmetic Calculator
+                Arithmetic
               </Link>
             </li>
             <li>
@@ -54,7 +54,17 @@ export default function Header() {
                   pathname === "/front-calculator" ? "text-blue-500 dark:text-blue-400" : ""
                 }`}
               >
-                Frontend Calculator
+                Frontend
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/savings"
+                className={`text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 ${
+                  pathname === "/savings" ? "text-blue-500 dark:text-blue-400" : ""
+                }`}
+              >
+                Savings
               </Link>
             </li>
           </ul>
@@ -102,7 +112,7 @@ export default function Header() {
                     : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
                 }`}
               >
-                Arithmetic Calculator
+                Arithmetic
               </Link>
             </li>
             <li>
@@ -114,7 +124,7 @@ export default function Header() {
                     : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
                 }`}
               >
-                Frontend Calculator
+                Frontend
               </Link>
             </li>
           </ul>
