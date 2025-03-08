@@ -58,7 +58,7 @@ export default function FrontCalculator() {
   return (
     <>
       <Helmet>
-        <title>Frontend Calculator | Frontend Web Developer Calculator</title>
+        <title>Frontend Calculator | SKHyena</title>
         <meta
           name="description"
           content="A special calculator application for frontend developers. Provides various functions such as aspect ratio calculation, color conversion, and unit conversion."

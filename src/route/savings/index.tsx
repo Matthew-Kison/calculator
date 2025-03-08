@@ -114,16 +114,19 @@ const SavingsCalculator = () => {
   return (
     <>
       <Helmet>
-        <title>Savings Calculator | Savings Calculator</title>
+        <title>Savings Calculator | SKHyena</title>
         <meta
           name="description"
-          content="A special calculator application for savings. Provides various functions such as savings calculation, color conversion, and unit conversion."
+          content="A specialized calculator for savings and investments. Plan your financial future with our easy-to-use tools for calculating interest, returns, and growth on your savings accounts and investments."
         />
-        <meta name="keywords" content="savings, calculator, developer tools, React, savings calculation, 적금, 적금 계산기 " />
-        <meta property="og:title" content="Savings Calculator | Savings Calculator" />
+        <meta
+          name="keywords"
+          content="savings calculator, investment calculator, compound interest, financial planning, retirement calculator, interest rate, savings planner, money growth, financial tools, SKHyena"
+        />
+        <meta property="og:title" content="Savings Calculator | SKHyena" />
         <meta
           property="og:description"
-          content="A special calculator application for savings. Provides various functions such as savings calculation, color conversion, and unit conversion."
+          content="A specialized calculator for savings and investments. Plan your financial future with our easy-to-use tools for calculating interest, returns, and growth on your savings accounts and investments."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://skhyena.com/savings" />

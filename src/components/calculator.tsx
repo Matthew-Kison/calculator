@@ -250,7 +250,7 @@ export default function Calculator() {
   return (
     <>
       <Helmet>
-        <title>Calculator | Dark Mode Calculator</title>
+        <title>Calculator | SKHyena</title>
         <meta name="description" content="Simple Calculator" />
         <meta name="keywords" content="calculator, 计算器, 계산기, logging calculator" />
         <meta property="og:title" content="Calculator | Dark Mode Calculator" />
@@ -261,9 +261,9 @@ export default function Calculator() {
 
       <div className="flex flex-col min-h-screen">
         <div className="flex flex-col items-center justify-center flex-grow p-4">
-          <div className="flex flex-col md:flex-row w-full max-w-xl justify-center gap-4">
+          <div className="flex flex-col md:flex-row w-full justify-center gap-4">
             {/* 계산기 본체 */}
-            <div className="w-full max-w-md bg-gray-100 dark:bg-gray-900 rounded-3xl shadow-2xl overflow-hidden">
+            <div className="w-full lg:max-w-md bg-gray-100 dark:bg-gray-900 rounded-3xl shadow-2xl overflow-hidden">
               {/* 계산기 디스플레이 */}
               <div className="p-6 bg-gradient-to-r from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-900">
                 <div className="text-right">

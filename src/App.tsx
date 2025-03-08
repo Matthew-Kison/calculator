@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Calculator from "./components/calculator";
 import FrontCalculator from "./route/front-calculator";
 import SavingsCalculator from "./route/savings";
+import JsonConvertor from "./route/json-convertor";
 
 function App() {
   // const [darkMode, setDarkMode] = useState(false);
@@ -29,6 +30,7 @@ function App() {
             <Route path="/" element={<Calculator />} />
             <Route path="/front-calculator" element={<FrontCalculator />} />
             <Route path="/savings" element={<SavingsCalculator />} />
+            <Route path="/json-convertor" element={<JsonConvertor />} />
           </Routes>
         </main>
       </div>
