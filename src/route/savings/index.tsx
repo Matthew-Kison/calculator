@@ -15,6 +15,7 @@ const translations = {
     result: "Result",
     monthlyDeposit: "Monthly Deposit:",
     invalidValues: "Please enter valid values.",
+    tax: "Tax-exempt amount.",
   },
   ko: {
     title: "저축 계산기",
@@ -27,6 +28,7 @@ const translations = {
     result: "결과",
     monthlyDeposit: "월 납입액:",
     invalidValues: "유효한 값을 입력해주세요.",
+    tax: "세금 미적용 금액입니다.",
   },
 };
 
@@ -176,6 +178,7 @@ const SavingsCalculator = () => {
                     {monthlyDeposit ? monthlyDeposit.toLocaleString() : 0}
                   </span>
                 </p>
+                <div>{t.tax}</div>
               </Alert>
             )}
           </CardFooter>
