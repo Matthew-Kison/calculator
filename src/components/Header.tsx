@@ -14,6 +14,7 @@ const navItems: NavItem[] = [
   { path: "/savings", label: "Savings" },
   { path: "/json-convertor", label: "JSON Convertor" },
   { path: "/favicon", label: "Favicon" },
+  { path: "/blog", label: "Blog" },
 ];
 
 // 데스크탑 네비게이션 컴포넌트

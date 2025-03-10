@@ -13,12 +13,15 @@
   "dependencies": {
     "@heroui/react": "^2.7.4",
     "@monaco-editor/react": "^4.7.0",
+    "@tanstack/react-query": "^5.67.2",
     "dotenv": "^16.4.7",
     "framer-motion": "^12.4.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-dropzone": "^14.3.8",
     "react-helmet-async": "^2.0.5",
+    "react-icons": "^5.5.0",
+    "react-intersection-observer": "^9.16.0",
     "react-router-dom": "^7.2.0"
   },
   "devDependencies": {
